@@ -1,48 +1,41 @@
 #include <stdio.h>
 
-int main (){
-    
-    int first_num, sec_num, operation;
-    
-    printf("Enter the first number: \n");
-    scanf("%d", &first_num);
+int main() {
 
-    printf("Enter the second number: \n");
-    scanf("%d", &first_num);
+    float first_num, second_num;
+    int operation;
 
-    printf("Enter the operation: \n");
+    printf("Enter first number: \n");
+    scanf("%f", &first_num);
+
+    printf("Enter second number: \n");
+    scanf("%f", &second_num);
+
+    printf("Enter first number: \n");
     scanf("%d", &operation);
 
-
     if(operation != 1 && operation != 2 && operation != 3 && operation != 4) {
-        printf("Error: No such operation!");
+        printf("Invalid operation!");
         return 0;
-    } else {
-        if(operation == 1) {
-            int sum = first_num + sec_num;
-            printf("The sum is %d ", sum);
-        } else if (operation == 2) {
-            int diff;
-        if(first_num > sec_num) {
-            diff = first_num - sec_num;
-        } else {
-            diff = sec_num - first_num;
-        }      
-        printf("The difference is %d ", diff); 
-        } else if(operation == 3) {
-            int product = first_num * sec_num;
-            printf("The product is %d ", product);
-        } else {
-            int quo;
-            if(first_num > sec_num) {
-                quo = (float)first_num / sec_num;
-            } else {
-                quo = (float) sec_num / first_num; // Type conversion
-            }
-            printf("The quotient is %f ", quo);
-        }
     }
 
-    return 0;
+    if(operation == 1){
+        printf("Result of addition : %f\n", first_num + second_num);
+    }
+
+    if(operation == 2){
+        printf("Result of subtraction : %f\n", first_num - second_num);
+    }
+
+    if(operation == 3){
+        printf("Result of multiplication : %f\n", first_num * second_num);
+    }
+
+    if(operation == 4){
+        printf("Result of division : %f\n", first_num / second_num);
+    }
+
+return 0;
+
 
 }
